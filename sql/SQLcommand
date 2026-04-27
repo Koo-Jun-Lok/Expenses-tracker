@@ -1,0 +1,58 @@
+-- Create database
+CREATE DATABASE IF NOT EXISTS expense_tracker;
+USE expense_tracker;
+
+-- Users table (for authentication)
+CREATE TABLE users (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    full_name VARCHAR(100),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP，
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- Expenses table (7 fields as required)
+CREATE TABLE expenses (
+    id INT PRIMARY KEY AUTO_INCREMENT,                    -- Integer, Unique
+    user_id INT NOT NULL,                                 -- Integer (links to users)
+    amount DECIMAL(10,2) NOT NULL,                        -- Integer/Decimal type
+    category VARCHAR(50) NOT NULL,                        -- String
+    description TEXT,                                     -- String
+    expense_date DATE NOT NULL,                           -- Date
+    location VARCHAR(100),                                -- String
+    receipt_image VARCHAR(255),                           -- String (for Member 2)
+    currency VARCHAR(10) DEFAULT 'MYR',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+-- Expense categories table
+CREATE TABLE categories (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(50) NOT NULL,
+    color VARCHAR(7) DEFAULT '#3B82F6',
+    icon VARCHAR(50)
+);
+
+-- Insert default categories
+INSERT INTO categories (name, color, icon) VALUES
+('Food & Dining', '#EF4444', '🍔'),
+('Transportation', '#3B82F6', '🚗'),
+('Shopping', '#8B5CF6', '🛍️'),
+('Entertainment', '#EC4899', '🎬'),
+('Bills & Utilities', '#10B981', '💡'),
+('Education', '#F59E0B', '📚'),
+('Healthcare', '#6366F1', '🏥'),
+('Others', '#6B7280', '📦');
+
+ALTER TABLE expenses ADD COLUMN type ENUM('expense', 'income') NOT NULL DEFAULT 'expense' AFTER user_id;
+ALTER TABLE expenses MODIFY receipt_image LONGTEXT;
+ALTER TABLE categories ADD COLUMN type ENUM('expense', 'income') NOT NULL DEFAULT 'expense';
+
+INSERT INTO categories (name, color, icon, type) VALUES 
+('Salary', '#10B981', '💰', 'income'),
+('Bonus', '#3B82F6', '🎁', 'income'),
+('Investment', '#8B5CF6', '📈', 'income'),
+('Part Time', '#F59E0B', '⏱️', 'income');
