@@ -4,6 +4,11 @@
 > 
 > 🌐 **[Live Demo](https://koo.codex-biz.com/ExpensesTracker/index.php)**
 
+## 📥 Download App
+
+[![Download APK](https://img.shields.io/badge/Download_APK-Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)]((https://github.com/Koo-Jun-Lok/Expenses-tracker/releases/download/v1.0.0/Expense.Tracker.apk))
+
+> **Note:** Since this app is not on the Google Play Store, you may need to enable **"Install from Unknown Sources"** in your Android settings.
 ---
 
 ## 📌 Project Info
