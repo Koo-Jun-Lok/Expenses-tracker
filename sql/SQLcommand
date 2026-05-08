@@ -3,13 +3,13 @@ CREATE DATABASE IF NOT EXISTS expense_tracker;
 USE expense_tracker;
 
 -- Users table (for authentication)
-CREATE TABLE users (
+CREATE TABLE users_ET (
     id INT PRIMARY KEY AUTO_INCREMENT,
     username VARCHAR(50) UNIQUE NOT NULL,
     email VARCHAR(100) UNIQUE NOT NULL,
     password VARCHAR(255) NOT NULL,
     full_name VARCHAR(100),
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP，
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
@@ -25,7 +25,7 @@ CREATE TABLE expenses (
     receipt_image VARCHAR(255),                           -- String (for Member 2)
     currency VARCHAR(10) DEFAULT 'MYR',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+    FOREIGN KEY (user_id) REFERENCES users_ET(id) ON DELETE CASCADE
 );
 
 -- Expense categories table
@@ -50,6 +50,9 @@ INSERT INTO categories (name, color, icon) VALUES
 ALTER TABLE expenses ADD COLUMN type ENUM('expense', 'income') NOT NULL DEFAULT 'expense' AFTER user_id;
 ALTER TABLE expenses MODIFY receipt_image LONGTEXT;
 ALTER TABLE categories ADD COLUMN type ENUM('expense', 'income') NOT NULL DEFAULT 'expense';
+
+ALTER TABLE categories CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+ALTER TABLE expenses CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 INSERT INTO categories (name, color, icon, type) VALUES 
 ('Salary', '#10B981', '💰', 'income'),
