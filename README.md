@@ -9,10 +9,6 @@
 **Group:** B  
 **Lecturer:** Prof. Madya Dr. Ahmad Suki Bin Che Mohamed Arif  
 
-### 👨‍💻 Team Members
-- KOO JUN LOK (299043)  
-- LEONG JING YUN (298804)  
-
 ---
 
 ## 🧾 Overview
