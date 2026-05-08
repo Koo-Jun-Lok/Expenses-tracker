@@ -11,12 +11,7 @@
 > **Note:** Since this app is not on the Google Play Store, you may need to enable **"Install from Unknown Sources"** in your Android settings.
 ---
 
-## 📌 Project Info
-**Course:** STIWK2114 Mobile Programming  
-**Group:** B  
-**Lecturer:** Prof. Madya Dr. Ahmad Suki Bin Che Mohamed Arif  
 
----
 
 ## 🧾 Overview
 
