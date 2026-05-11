@@ -26,16 +26,6 @@ This application helps users:
 
 ---
 
-## ❗ Problem Statement
-
-Many people still rely on paper receipts, static spreadsheets, or simply their memory to manage finances. These traditional methods are:
-- ❌ **Inefficient** & time-consuming  
-- ❌ **Error-prone** - ❌ **Lacking in insights** (hard to visualize spending trends)  
-
-👉 **Solution:** This system centralizes financial tracking into a convenient, automated mobile solution.
-
----
-
 ## 🎯 Objectives
 
 - 📱 Develop a mobile expense tracker utilizing a WebView framework.
@@ -59,12 +49,6 @@ Many people still rely on paper receipts, static spreadsheets, or simply their m
 - **🔎 Search & Filter:** Easy lookup and calendar view integration.
 - **📱 Responsive UI:** Optimized for mobile touch interactions.
 
-### ❌ Out of Scope
-- Bank account integration  
-- Automatic OCR receipt scanning  
-- Investment tracking  
-- Automated bill reminders  
-- Multi-user/household accounts  
 
 ---
 
@@ -85,26 +69,6 @@ Many people still rely on paper receipts, static spreadsheets, or simply their m
 | **Database** | MySQL |
 | **Mobile** | Android (WebView) |
 | **APIs** | Currency Exchange API, OpenStreetMap / GPS |
-
----
-
-## 🎨 UI/UX Design
-
-### 🎨 Colour Scheme
-- **Primary:** `#3B82F6` (Blue)
-- **Secondary:** `#10B981` (Green)
-- **Accent:** `#8B5CF6` (Purple)
-- **Background:** `#F8FAFC` (Light Gray)
-
-### 🔤 Typography
-- **Font:** Poppins
-- Clean visual hierarchy for enhanced readability.
-
-### 📐 Design Principles
-- Mobile-first approach  
-- Touch-friendly tap targets  
-- Consistent navigation  
-- Modern glassmorphism & minimalist layout  
 
 ---
 
