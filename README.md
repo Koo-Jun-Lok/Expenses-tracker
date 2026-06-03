@@ -8,12 +8,6 @@ https://koo.codex-biz.com/ExpensesTracker/index.php
 ---
 
 
-
-Note:
-This application is distributed as an APK file and is not published on the Google Play Store. Android users may need to enable “Install from Unknown Sources” before installation.
-
----
-
 ## Project Overview
 
 The Expense Tracker application was developed under the theme of Personal Finance Management.
