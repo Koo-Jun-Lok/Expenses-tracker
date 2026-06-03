@@ -3,13 +3,11 @@
 A hybrid mobile application developed for personal finance management. The system allows users to record, manage, and analyze daily financial activities through a mobile-friendly interface.
 
 Live Demo:  
-:contentReference[oaicite:0]{index=0}
+https://koo.codex-biz.com/ExpensesTracker/index.php
 
 ---
 
-## Application Download
 
-:contentReference[oaicite:1]{index=1}
 
 Note:
 This application is distributed as an APK file and is not published on the Google Play Store. Android users may need to enable “Install from Unknown Sources” before installation.
